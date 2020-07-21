@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1053552437793",
+    "firebase_url": "https://vinddd-efea1.firebaseio.com",
+    "project_id": "vinddd-efea1",
+    "storage_bucket": "vinddd-efea1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053552437793:android:00b7ecee09b41a78f01160",
+        "android_client_info": {
+          "package_name": "com.example.vinddd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053552437793-c8pnn5nssbd6h4737tvp6lh159anidsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqyhxEF6zSKzMfXkzq0vrk_P_FFo1wIbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053552437793-c8pnn5nssbd6h4737tvp6lh159anidsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
