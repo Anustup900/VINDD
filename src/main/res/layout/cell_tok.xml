@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidUnknownAttribute -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:showFullScreenButton="false"
+        app:showVideoCurrentTime="false"
+        app:showSeekBar="false"
+        app:useWebUi="false"
+        app:showYouTubeButton="false"
+        app:showVideoDuration="false"
+        android:id="@+id/videoPlayer"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginEnd="12dp"
+            android:textSize="18sp"
+            tools:textStyle="bold"
+            fontPath="fonts/Montserrat-Black.ttf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/headerTextsSeparator"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:text="@string/app_name"
+            android:id="@+id/appNameHeaderTv"
+            tools:ignore="MissingPrefix" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/white"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/appNameHeaderTv"
+            app:layout_constraintEnd_toStartOf="@id/appThemeHeaderTv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/headerTextsSeparator"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+            android:textSize="13sp"
+            fontPath="fonts/Montserrat-Medium.ttf"
+            android:lineSpacingMultiplier="1.2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/headerTextsSeparator"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/made_for_india_n_from_indians"
+            android:id="@+id/appThemeHeaderTv"
+            tools:ignore="MissingPrefix" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_bottom_bar_gradient"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        android:id="@+id/userDetailsHolder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            tools:textStyle="bold"
+            android:textSize="14sp"
+            fontPath="fonts/Montserrat-SemiBold.ttf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/dummy_user_name"
+            android:id="@+id/userNameTv"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            tools:textStyle="bold"
+            android:lines="2"
+            android:textSize="12sp"
+            android:maxWidth="220dp"
+            fontPath="fonts/Montserrat-SemiBold.ttf"
+            android:layout_marginTop="10dp"
+            android:lineSpacingMultiplier="1.2"
+            app:layout_constraintTop_toBottomOf="@id/userNameTv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="#bts #new #amazing #sexy #cool #interesting #unique"
+            android:id="@+id/userTagsTv"
+            tools:ignore="MissingPrefix" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:id="@+id/bottomBar">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/bg_white_circle"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="sound_track.json"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/soundTrackLottie"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:textColor="#848484"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            tools:text="Passenger - Let Her Go - New Soundtrack here - New Soundtrack here"
+            android:marqueeRepeatLimit="marquee_forever"
+            app:layout_constraintStart_toEndOf="@id/soundTrackLottie"
+            android:id="@+id/soundTrackNameTv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="20dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="music_notes.json"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/musicNotesLottie"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@id/commentHolder"
+        app:layout_constraintStart_toStartOf="@id/commentHolder"
+        app:layout_constraintBottom_toTopOf="@id/commentHolder"
+        android:id="@+id/likeHolder">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/likeTv"
+            android:src="@drawable/ic_like"
+            android:tint="@color/white"
+            android:id="@+id/likeIconIv"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/likes"
+            android:id="@+id/likeTv"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@id/shareHolder"
+        app:layout_constraintStart_toStartOf="@id/shareHolder"
+        app:layout_constraintBottom_toTopOf="@id/shareHolder"
+        android:id="@+id/commentHolder">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/commentTv"
+            android:src="@drawable/ic_comment"
+            android:tint="@color/white"
+            android:id="@+id/commentIconIv"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/comments"
+            android:id="@+id/commentTv"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@id/playerDiscLottie"
+        app:layout_constraintStart_toStartOf="@id/playerDiscLottie"
+        app:layout_constraintBottom_toTopOf="@id/playerDiscLottie"
+        android:id="@+id/shareHolder">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/shareTv"
+            android:src="@drawable/ic_share"
+            android:tint="@color/white"
+            android:id="@+id/shareIconIv"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/share"
+            android:id="@+id/shareTv"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        tools:background="#BCBCBC"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="player_disc.json"
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBar"
+        android:id="@+id/playerDiscLottie"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

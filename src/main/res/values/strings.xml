@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">VINDD</string>
+    <string name="made_for_india_n_from_indians">For Indians\nBy Indians</string>
+    <string name="dummy_user_name">Anonymous</string>
+    <string name="upload_talk">UPLOAD TALK</string>
+    <string name="set_youtube_video_id_here">enter youtube url</string>
+    <string name="type_user_name_here">type user name - no spaces, capital</string>
+    <string name="type_song_name">type song name</string>
+    <string name="type_share_count">type share count</string>
+    <string name="type_like_count">type like count</string>
+    <string name="type_space_separated_hashtags">type space-separated hashtags</string>
+    <string name="type_comments_count">type comments count</string>
+    <string name="share">%s Share</string>
+    <string name="comments">%s Comments</string>
+    <string name="likes">%s Likes</string>
+    <string name="no_internet">No internet connection. Please retry.</string>
+    <string name="retry">RETRY</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="coming_soon">This is an unlimited video streaming app\n you can stream , share and have a tiktok experience here\n Lead and plan Pooja Sharma \n Developed by Anustup Mukherjee Ayushi Chauhan Yash Pant Abhishek Prosad</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rate_us_5_stars">Rate us 5 ⭐️</string>
+    <string name="share_app">Share App ♥️</string>
+    <string name="note_coming_soon">Note:\nThe following features will be launched in coming days:\n\n- Upload option to publish videos\n- Profile section\n- Like, comment and share</string>
+</resources>
